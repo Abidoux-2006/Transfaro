@@ -1,0 +1,13 @@
+{
+  "version": "7",
+  "dialect": "mysql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1776621131248,
+      "tag": "0000_legal_trish_tilby",
+      "breakpoints": true
+    }
+  ]
+}
