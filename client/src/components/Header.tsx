@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { Link } from "wouter";
 import { Menu, X } from "lucide-react";
-import { Button } from "../components/ui/button";
+import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "../components/ui/dropdown-menu";
+} from "./ui/dropdown-menu";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
