@@ -271,14 +271,16 @@ export default function Services() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-container bg-white text-accent-foreground">
+      <section className="section-container bg-white text-black">
         <div className="container text-center animate-fade-in-up">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             Need a Custom Solution?
           </h2>
-          <p className="text-lg text-accent-foreground/90 mb-8 max-w-2xl mx-auto">
+
+          <p className="text-lg text-black/90 mb-8 max-w-2xl mx-auto">
             <b>Contact our expert team to discuss your specific freight and logistics requirements.</b>
           </p>
+
           <Button
             asChild
             className="!bg-blue-600 !text-white !border-2 !border-blue-600 hover:!bg-white hover:!text-blue-600 hover:!border-blue-600 text-lg px-8 py-6 rounded-lg shadow-lg hover:shadow-xl transition-all"
