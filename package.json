@@ -7,7 +7,7 @@
     "dev": "tsx server/index.ts",
     "dev:vite": "vite",
     "start": "node dist/server/index.js",
-    "build": "tsc",
+    "build": "vite build",
     "preview": "vite preview",
     "build:server": "tsc -p server",
     "check": "tsc --noEmit",
