@@ -459,12 +459,12 @@ export default function Quote() {
       </section>
 
       {/* CTA Section */}
-      <section className="section-container bg-background bg-white">
+      <section className="section-container bg-white text-black">
         <div className="container text-center animate-fade-in-up">
           <h1 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Have Questions?
           </h1>
-          <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-black mb-8 max-w-2xl mx-auto">
             <b>Check out our Contact page or Services page to learn more about what we offer</b>
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

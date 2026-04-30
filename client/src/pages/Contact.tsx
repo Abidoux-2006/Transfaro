@@ -78,7 +78,12 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-bold text-foreground mb-2 text-lg">Fax</h3>
-                      <p className="text-muted-foreground font-semibold">+212 5229-85336</p>
+                      <a
+                        href="tel:+212522985336"
+                        className="text-accent hover:underline font-semibold"
+                      >
+                        +212 5229-85336
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -109,7 +114,7 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-bold text-foreground mb-2 text-lg">Address</h3>
-                      <p className="text-muted-foreground font-medium leading-relaxed">
+                      <p className="text-black font-medium leading-relaxed">
                         119 Bir Anzarane<br />
                         Casablanca 20330<br />
                         Morocco
@@ -126,9 +131,9 @@ export default function Contact() {
                     </div>
                     <div>
                       <h3 className="font-bold text-foreground mb-2 text-lg">Business Hours</h3>
-                      <p className="text-muted-foreground font-medium">
-                        Monday - Friday: 9:00 AM - 6:00 PM<br />
-                        Saturday: 9:00 AM - 1:00 PM<br />
+                      <p className="text-black font-medium leading-relaxed">
+                        Monday - Friday: 8:30 AM - 5:00 PM<br />
+                        Saturday: 9:00 AM - 12:00 PM<br />
                         Sunday: Closed
                       </p>
                     </div>
