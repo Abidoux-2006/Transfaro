@@ -24,15 +24,16 @@ export default function Header() {
       <div className="container flex items-center justify-between h-25">
 
         {/* Logo */}
-        <Link href="/">
-          <div className="flex items-center gap-2 hover:opacity-80 transition-opacity">
-            <img
-              src="/images/logo.jpg"
-              alt="Transfaro Logo"
-              className="h-24 w-auto"
-            />
-          </div>
-        </Link>
+        <div
+          onClick={() => window.location.href = "/"}
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity cursor-pointer"
+        >
+          <img
+            src="/images/logo.jpg"
+            alt="Transfaro Logo"
+            className="h-24 w-auto"
+          />
+        </div>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-2">
