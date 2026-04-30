@@ -47,7 +47,8 @@ export default function Contact() {
 
               <div className="space-y-6">
                 {/* Phone */}
-                <div className="group p-6 rounded-xl border-2 border-accent/20 hover:border-accent/60 bg-gradient-to-br from-blue-500/10 to-blue-500/5 hover:shadow-lg transition-all">
+                <div className="group p-6 rounded-xl border-2 !border-blue-100 hover:!border-blue-600
+                 bg-gradient-to-br from-blue-500/10 to-blue-500/5 hover:shadow-lg transition-all">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600 text-white flex-shrink-0">
                       <Phone className="w-6 h-6" />
@@ -71,7 +72,7 @@ export default function Contact() {
                 </div>
 
                 {/* Fax */}
-                <div className="group p-6 rounded-xl border-2 border-accent/20 hover:border-accent/60 bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 hover:shadow-lg transition-all">
+                <div className="group p-6 rounded-xl border-2 !border-blue-100 hover:!border-blue-600 bg-gradient-to-br from-cyan-500/10 to-cyan-500/5 hover:shadow-lg transition-all">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-lg bg-gradient-to-br from-cyan-500 to-cyan-600 text-white flex-shrink-0">
                       <Phone className="w-6 h-6" />
@@ -89,7 +90,7 @@ export default function Contact() {
                 </div>
 
                 {/* Email */}
-                <div className="group p-6 rounded-xl border-2 border-accent/20 hover:border-accent/60 bg-gradient-to-br from-purple-500/10 to-purple-500/5 hover:shadow-lg transition-all">
+                <div className="group p-6 rounded-xl border-2 !border-blue-100 hover:!border-blue-600 bg-gradient-to-br from-purple-500/10 to-purple-500/5 hover:shadow-lg transition-all">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-lg bg-gradient-to-br from-purple-500 to-purple-600 text-white flex-shrink-0">
                       <Mail className="w-6 h-6" />
@@ -107,7 +108,7 @@ export default function Contact() {
                 </div>
 
                 {/* Address */}
-                <div className="group p-6 rounded-xl border-2 border-accent/20 hover:border-accent/60 bg-gradient-to-br from-orange-500/10 to-orange-500/5 hover:shadow-lg transition-all">
+                <div className="group p-6 rounded-xl border-2 !border-blue-100 hover:!border-blue-600 bg-gradient-to-br from-orange-500/10 to-orange-500/5 hover:shadow-lg transition-all">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 text-white flex-shrink-0">
                       <MapPin className="w-6 h-6" />
@@ -124,7 +125,7 @@ export default function Contact() {
                 </div>
 
                 {/* Hours */}
-                <div className="group p-6 rounded-xl border-2 border-accent/20 hover:border-accent/60 bg-gradient-to-br from-green-500/10 to-green-500/5 hover:shadow-lg transition-all">
+                <div className="group p-6 rounded-xl border-2 !border-blue-100 hover:!border-blue-600 bg-gradient-to-br from-green-500/10 to-green-500/5 hover:shadow-lg transition-all">
                   <div className="flex items-start gap-4">
                     <div className="p-3 rounded-lg bg-gradient-to-br from-green-500 to-green-600 text-white flex-shrink-0">
                       <Clock className="w-6 h-6" />
