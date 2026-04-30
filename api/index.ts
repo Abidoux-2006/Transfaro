@@ -7,8 +7,13 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   }
 
   try {
-    // data coming from frontend
-    const data = req.body;
+    const data = typeof req.body === "string"
+      ? JSON.parse(req.body)
+      : req.body;
+
+    if (!data || typeof data !== "object") {
+      return res.status(400).json({ error: "Invalid payload" });
+    }
 
     await notifyOwner(data);
 
