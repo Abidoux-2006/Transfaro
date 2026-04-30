@@ -1,10 +1,10 @@
-import { NOT_ADMIN_ERR_MSG, UNAUTHED_ERR_MSG } from '@shared/const';
+import { NOT_ADMIN_ERR_MSG, UNAUTHED_ERR_MSG } from "shared/const";
 import { initTRPC, TRPCError } from "@trpc/server";
 import superjson from "superjson";
 import type { TrpcContext } from "./context";
-import { sendQuoteEmail } from "../_core/email";
+import { notifyOwner } from "./notification";
 import { z } from "zod";
-import { ENV } from './env';
+import { ENV } from "./env";
 
 const t = initTRPC.context<TrpcContext>().create({
   transformer: superjson,
@@ -13,11 +13,14 @@ const t = initTRPC.context<TrpcContext>().create({
 export const router = t.router;
 export const publicProcedure = t.procedure;
 
-const requireUser = t.middleware(async opts => {
+const requireUser = t.middleware(async (opts) => {
   const { ctx, next } = opts;
 
   if (!ctx.user) {
-    throw new TRPCError({ code: "UNAUTHORIZED", message: UNAUTHED_ERR_MSG });
+    throw new TRPCError({
+      code: "UNAUTHORIZED",
+      message: UNAUTHED_ERR_MSG,
+    });
   }
 
   return next({
@@ -31,11 +34,14 @@ const requireUser = t.middleware(async opts => {
 export const protectedProcedure = t.procedure.use(requireUser);
 
 export const adminProcedure = t.procedure.use(
-  t.middleware(async opts => {
+  t.middleware(async (opts) => {
     const { ctx, next } = opts;
 
-    if (!ctx.user || ctx.user.role !== 'admin') {
-      throw new TRPCError({ code: "FORBIDDEN", message: NOT_ADMIN_ERR_MSG });
+    if (!ctx.user || ctx.user.role !== "admin") {
+      throw new TRPCError({
+        code: "FORBIDDEN",
+        message: NOT_ADMIN_ERR_MSG,
+      });
     }
 
     return next({
@@ -44,7 +50,7 @@ export const adminProcedure = t.procedure.use(
         user: ctx.user,
       },
     });
-  }),
+  })
 );
 
 export const quoteRouter = router({
@@ -56,14 +62,13 @@ export const quoteRouter = router({
         message: z.string(),
       })
     )
-
     .mutation(async ({ input }) => {
       console.log("🔥 QUOTE INPUT:", input);
       console.log("🔥 EMAIL FROM:", ENV.emailFrom);
       console.log("🔥 SENDGRID KEY:", ENV.sendgridApiKey ? "OK" : "MISSING");
 
-  const title = `New Quote Request from ${input.name}`;
-      await sendQuoteEmail(input);
+      // ✅ FIXED: use correct function
+      await notifyOwner(input);
 
       return {
         success: true,

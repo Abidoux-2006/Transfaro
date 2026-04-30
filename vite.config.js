@@ -1,10 +1,11 @@
-import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 import fs from "node:fs";
-import { defineConfig } from "vite";
-import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { defineConfig } from "vite";
+import tsconfigPaths from "vite-tsconfig-paths";
+import { vitePluginManusRuntime } from "vite-plugin-manus-runtime";
 
 // =============================================================================
 // Paths
@@ -128,6 +129,7 @@ export default defineConfig({
   plugins: [
     react(),
     tailwindcss(),
+    tsconfigPaths(),
     vitePluginManusRuntime(),
     vitePluginManusDebugCollector(),
   ],
